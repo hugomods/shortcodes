@@ -8,4 +8,5 @@
 
 ## Media Player
 
+- [Bilibili](https://hugomods.com/en/docs/shortcodes/bilibili/)
 - [NetEase Cloud Music](https://hugomods.com/en/docs/shortcodes/netease-cloud-music/)
