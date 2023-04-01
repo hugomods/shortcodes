@@ -1,0 +1,17 @@
+{
+  "name": "hugomods-shortcodes",
+  "homepage": "https://github.com/hugomods/shortcodes",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hugomods/shortcodes.git"
+  },
+  "author": "Razon Yang <razonyang@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/hugomods/shortcodes/issues"
+  },
+  "devDependencies": {
+    "prettier": "^2.7.1",
+    "prettier-plugin-go-template": "^0.0.13"
+  }
+}

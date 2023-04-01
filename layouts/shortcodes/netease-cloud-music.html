@@ -1,0 +1,49 @@
+{{/* NetEase Cloud Music Shortcode. */}}
+{{/* Parameters: */}}
+{{/* - id (#0): playlist, album or song ID. */}}
+{{/* - type (#1): playlist, album and song, default to playlist. */}}
+{{/* - auto (#2): auto play if true, default to false. */}}
+{{/* - title (#3): the title of frame. */}}
+{{/* - height: the height of player, default to 66 (song) or 310 (others). */}}
+{{/* - width: the width of player, default to 100%. */}}
+{{- $id := "" }}
+{{- $type := "playlist" }}
+{{- $types := dict "playlist" 0 "album" 1 "song" 2 }}
+{{- $auto := 0 }}
+{{- $height := 0 }}
+{{- $width := "100%" }}
+{{- $title := "" }}
+{{- if .IsNamedParams }}
+  {{- $id = .Get "id" }}
+  {{- with .Get "type" }}{{ $type = . }}{{ end }}
+  {{- if .Get "auto" }}{{ $auto = 1 }}{{ end }}
+  {{- with .Get "title" }}{{ $title = . }}{{ end }}
+  {{- with .Get "height" }}{{ $height = . }}{{ end }}
+  {{- with .Get "width" }}{{ $width = add . 20 | printf "%d" }}{{ end }}
+{{- else }}
+  {{- $id = .Get 0 }}
+  {{- with .Get 1 }}{{ $type = . }}{{ end }}
+  {{- if .Get 2 }}{{ $auto = 1 }}{{ end }}
+  {{- with .Get 3 }}{{ $title = . }}{{ end }}
+{{- end }}
+{{- if not $height }}{{ $height = cond (eq $type "song") 66 430 }}{{ end }}
+{{- $src := printf
+  "https://music.163.com/outchain/player?type=%d&id=%d&auto=%d&height=%d"
+  (cond (isset $types $type) (index $types $type) 0)
+  $id
+  $auto
+  $height
+}}
+{{- if not $title }}{{ $title = printf "%s's %d" $type $id }}{{- end }}
+<iframe
+  class="netease-cloud-music-frame"
+  title="{{ $title }}"
+  frameborder="no"
+  border="0"
+  marginwidth="0"
+  marginheight="0"
+  width="{{ $width }}"
+  height="{{ add $height 20 }}"
+  loading="lazy"
+  src="{{ $src }}">
+</iframe>
