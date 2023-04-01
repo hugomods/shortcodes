@@ -1,0 +1,23 @@
+{{/* Bilibili video shortcode. */}}
+{{/* Parameters: */}}
+{{/* - id (#0): the video ID, such as BVXXXXXXXXXX. */}}
+{{/* - fullscreen: allow fullscreen, default to true. */}}
+{{- $id := "" }}
+{{- $fullscreen := true }}
+{{- if .IsNamedParams }}
+  {{- $id = .Get "id" }}
+  {{- if isset .Params "fullscreen" }}
+    {{ $fullscreen = .Get "fullscreen" }}
+  {{ end }}
+{{- else }}
+  {{- $id = .Get 0 }}
+{{- end }}
+<iframe
+  class="bilibili-frame"
+  src="https://player.bilibili.com/player.html?bvid={{ $id }}"
+  scrolling="no"
+  border="0"
+  frameborder="no"
+  framespacing="0"
+  {{ if $fullscreen }}allowfullscreen{{ end }}>
+</iframe>
