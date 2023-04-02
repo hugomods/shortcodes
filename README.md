@@ -6,6 +6,13 @@
 [![License](https://img.shields.io/github/license/hugomods/shortcodes?style=flat-square)](https://github.com/hugomods/shortcodes/blob/main/LICENSE)
 [![Version](https://img.shields.io/badge/dynamic/json?color=blue&label=version&query=name&url=https://api.razonyang.com/v1/github/tag/hugomods/shortcodes&style=flat-square)](https://github.com/hugomods/shortcodes/tags)
 
+This module intends to extend Hugo shortcodes, feature request and PR are welcome.
+
+```toml
+[[module.imports]]
+path = "github.com/hugomods/shortcodes"
+```
+
 ## Code Editor
 
 - [CodePen](https://hugomods.com/en/docs/shortcodes/codepen/)
