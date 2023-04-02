@@ -9,6 +9,7 @@
 ## Code Editor
 
 - [JSFiddle](https://hugomods.com/en/docs/shortcodes/jsfiddle/)
+- [JSRun](https://hugomods.com/en/docs/shortcodes/jsrun/)
 
 ## Media Player
 
