@@ -8,6 +8,7 @@
 
 ## Code Editor
 
+- [CodePen](https://hugomods.com/en/docs/shortcodes/codepen/)
 - [JSFiddle](https://hugomods.com/en/docs/shortcodes/jsfiddle/)
 - [JSRun](https://hugomods.com/en/docs/shortcodes/jsrun/)
 

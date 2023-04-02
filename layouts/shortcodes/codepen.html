@@ -1,0 +1,42 @@
+{{/* CodePen shortcode. */}}
+{{/* Parameters: */}}
+{{/* - user (#0): the user ID. */}}
+{{/* - id (#1): the code ID (hash). */}}
+{{/* - theme: light or dark. */}}
+{{/* - defaultTabs: default tabs separated by comma, html, js, css and result, default to "html,result". */}}
+{{/* - height: frame height, default to 300. */}}
+{{- $user := "" }}
+{{- $id := "" }}
+{{- $theme := "" }}
+{{- $defaultTabs := "html,result" }}
+{{- $height := 300 }}
+{{- if .IsNamedParams }}
+  {{- $user = .Get "user" }}
+  {{- $id = .Get "id" }}
+  {{- with .Get "theme" }}{{ $theme = . }}{{ end }}
+  {{- with .Get "defaultTabs" }}{{ $defaultTabs = . }}{{ end }}
+  {{- with .Get "height" }}{{ $height = . }}{{ end }}
+{{- else }}
+  {{- $user = .Get 0 }}
+  {{- $id = .Get 1 }}
+{{- end }}
+{{- $src := printf
+  "https://codepen.io/%s/embed/%s?default-tab=%s"
+  $user
+  $id
+  $defaultTabs
+}}
+{{- with $theme }}
+  {{- $src = printf "%s&theme-id=%s" $src . }}
+{{- end }}
+<iframe
+  width="100%"
+  height="{{ $height }}"
+  style="width: 100%;"
+  title="Hello World!"
+  src="{{ $src }}"
+  frameborder="no"
+  loading="lazy"
+  allowtransparency="true"
+  allowfullscreen="true">
+</iframe>
