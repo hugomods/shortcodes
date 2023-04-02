@@ -1,0 +1,37 @@
+{{/* Asciinema shortcode. */}}
+{{/* Parameters: */}}
+{{/* - id (#0) : the asciicast ID. */}}
+{{/* - theme   : asciinema, tango, solarized-dark, solarized-light, monokai. */}}
+{{/* - autoplay: auto play, default to false. */}}
+{{/* - speed   : playback speed, default to 1. */}}
+{{/* - cols    : override width (in characters) of the emulated terminal. */}}
+{{/* - rows    : override height (in lines) of the emulated terminal. */}}
+{{- $id := "" }}
+{{- $theme := "" }}
+{{- $autoplay := false }}
+{{- $speed := 0 }}
+{{- $cols := 0 }}
+{{- $rows := 0 }}
+{{- if .IsNamedParams }}
+  {{- $id = .Get "id" }}
+  {{- with .Get "theme" }}{{ $theme = . }}{{ end }}
+  {{- with .Get "autoplay" }}{{ $autoplay = . }}{{ end }}
+  {{- with .Get "speed" }}{{ $speed = . }}{{ end }}
+  {{- with .Get "cols" }}{{ $cols = . }}{{ end }}
+  {{- with .Get "rows" }}{{ $rows = . }}{{ end }}
+{{- else }}
+  {{- $id = .Get 0 }}
+{{- end }}
+{{- $src := printf
+  "https://asciinema.org/a/%d.js"
+  $id
+}}
+<script
+  async
+  id="asciicast-{{ $id }}"
+  {{ with $theme }}data-theme="{{ . }}"{{ end }}
+  {{ with $autoplay }}data-autoplay="1"{{ end }}
+  {{ with $speed }}data-speed="{{ . }}"{{ end }}
+  {{ with $cols }}data-cols="{{ . }}"{{ end }}
+  {{ with $rows }}data-rows="{{ . }}"{{ end }}
+  src="{{ $src }}"></script>
