@@ -1,0 +1,38 @@
+{{/* JSFiddle shortcode. */}}
+{{/* Parameters: */}}
+{{/* - user (#0): the user ID. */}}
+{{/* - id (#1): the fiddle ID (hash). */}}
+{{/* - theme: light or dark, default to light. */}}
+{{/* - tabs: tabs separated by comma, default to js,html,css,result. */}}
+{{- $user := "" }}
+{{- $id := "" }}
+{{- $theme := "" }}
+{{- $defaultTabs := "js,html,css,result" }}
+{{- $tabs := "" }}
+{{- if .IsNamedParams }}
+  {{- $user = .Get "user" }}
+  {{- $id = .Get "id" }}
+  {{- with .Get "theme" }}{{ $theme = . }}{{ end }}
+  {{- with .Get "tabs" }}{{ $tabs = . }}{{ end }}
+{{- else }}
+  {{- $user = .Get 0 }}
+  {{- $id = .Get 1 }}
+{{- end }}
+{{- $src := printf
+  "https://jsfiddle.net/%s/%s/2/embed/"
+  $user
+  $id
+}}
+{{- if or $tabs $theme }}
+  {{- if ne $theme "dark" }}
+    {{- $src = printf "%s%s" $src $tabs }}
+  {{- else }}
+    {{- $src = printf
+      "%s%s/%s"
+      $src
+      (cond (eq $tabs "") $defaultTabs $tabs)
+      $theme
+    }}
+  {{- end }}
+{{- end }}
+<script async src="{{ $src }}"></script>
