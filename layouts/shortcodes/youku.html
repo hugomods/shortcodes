@@ -1,0 +1,21 @@
+{{/* YouKu shortcode. */}}
+{{/* Parameters: */}}
+{{/* - id (#0) : the video ID. */}}
+{{- $id := "" }}
+{{- if .IsNamedParams }}
+  {{- $id = .Get "id" }}
+{{- else }}
+  {{- $id = .Get 0 }}
+{{- end }}
+
+{{- $src := printf
+  "https://player.youku.com/embed/%s"
+  $id
+}}
+<iframe
+  height="480"
+  width="100%"
+  loading="lazy"
+  src="{{ $src }}"
+  frameborder="0"
+  allowfullscreen></iframe>

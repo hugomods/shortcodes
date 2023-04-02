@@ -17,3 +17,4 @@
 - [Asciinema](https://hugomods.com/en/docs/shortcodes/asciinema/)
 - [Bilibili](https://hugomods.com/en/docs/shortcodes/bilibili/)
 - [NetEase Cloud Music](https://hugomods.com/en/docs/shortcodes/netease-cloud-music/)
+- [YouKu](https://hugomods.com/en/docs/shortcodes/youku/)
