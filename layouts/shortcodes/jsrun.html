@@ -1,0 +1,34 @@
+{{/* JSRun shortcode. */}}
+{{/* Parameters: */}}
+{{/* - id (#0): the code ID (hash). */}}
+{{/* - theme: light or dark, default to light. */}}
+{{/* - tabs: tabs separated by comma, i.e. js,html,css,result, default to all. */}}
+{{/* - height: the height of frame, default to 300. */}}
+{{/* - mode: operating mode for other languages, quick or term. */}}
+{{- $id := "" }}
+{{- $theme := "light" }}
+{{- $tabs := "all" }}
+{{- $mode := "" }}
+{{- $height := 300 }}
+{{- if .IsNamedParams }}
+  {{- $id = .Get "id" }}
+  {{- with .Get "theme" }}{{ $theme = . }}{{ end }}
+  {{- with .Get "tabs" }}{{ $tabs = . }}{{ end }}
+  {{- with .Get "height" }}{{ $height = . }}{{ end }}
+  {{- with .Get "mode" }}{{ $mode = . }}{{ end }}
+{{- else }}
+  {{- $id = .Get 0 }}
+{{- end }}
+{{- $src := printf
+  "https://jsrun.net/%s/embedded/%s/%s"
+  $id
+  (cond (eq $mode "") $tabs $mode)
+  $theme
+}}
+<iframe
+  width="100%"
+  height="{{ $height }}"
+  loading="lazy"
+  src="{{ $src }}"
+  allowfullscreen="allowfullscreen"
+  frameborder="0"></iframe>
