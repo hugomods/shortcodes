@@ -13,7 +13,7 @@ This module intends to extend Hugo shortcodes, feature request and PR are welcom
 path = "github.com/hugomods/shortcodes"
 ```
 
-## Code Editor
+## Code Playground
 
 - [CodePen](https://hugomods.com/en/docs/shortcodes/codepen/)
 - [JSFiddle](https://hugomods.com/en/docs/shortcodes/jsfiddle/)
