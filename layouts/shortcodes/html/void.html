@@ -1,0 +1,4 @@
+{{- if not (isset .Params "_name") }}
+  {{- errorf "[html] the tag name %q is missing" "_name" }}
+{{- end }}
+{{- partial "html/void" (dict "Name" (.Get "_name") "Params" .Params) }}

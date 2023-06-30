@@ -1,0 +1,10 @@
+{{/* Convert name-value pairs attributes to HTML string. */}}
+{{- $attrs := slice }}
+{{- range $name, $value := . }}
+  {{/* Ignore attribute name begin with underscore. */}}
+  {{- if hasPrefix $name "_" }}
+    {{- continue }}
+  {{- end }}
+  {{- $attrs = $attrs | append (printf `%s="%s"` $name ($value | htmlEscape)) }}
+{{- end }}
+{{- return delimit $attrs " " -}}
