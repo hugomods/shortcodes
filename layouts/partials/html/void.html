@@ -1,0 +1,6 @@
+{{- if .Params }}
+  {{- $attrs := partial "html/functions/attributes" .Params }}
+  {{- printf "<%s %s>" .Name $attrs | safeHTML -}}
+{{- else }}
+  {{- printf "<%s>" .Name | safeHTML -}}
+{{- end }}
