@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.9.0](https://github.com/hugomods/shortcodes/compare/v0.8.0...v0.9.0) (2023-06-30)
+
+
+### Features
+
+* add HTML shortcodes, void, tag, div and p ([9631ecb](https://github.com/hugomods/shortcodes/commit/9631ecb5d8d4e6605e3a1839256276b5760433c6))
+
 ## [0.8.0](https://github.com/hugomods/shortcodes/compare/v0.7.0...v0.8.0) (2023-06-29)
 
 
