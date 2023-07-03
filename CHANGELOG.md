@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.10.0](https://github.com/hugomods/shortcodes/compare/v0.9.0...v0.10.0) (2023-07-03)
+
+
+### Features
+
+* add the details shortcode ([fc7a5ca](https://github.com/hugomods/shortcodes/commit/fc7a5ca9074aa93348dfd8a62dd8d93edc8d617a))
+
 ## [0.9.0](https://github.com/hugomods/shortcodes/compare/v0.8.0...v0.9.0) (2023-06-30)
 
 
