@@ -1,0 +1,24 @@
+{{- $name := "" -}}
+{{- if .IsNamedParams -}}
+  {{- $name = .Get "name" -}}
+{{- else -}}
+  {{- $name = .Get 0 -}}
+{{- end -}}
+{{- if not $name -}}{{- errorf "[file-content]: the name is missing." -}}{{- end -}}
+{{- $content := "" -}}
+{{/* Reading from page resources. */}}
+{{- with .Page.Resources.GetMatch $name -}}
+  {{- $content = .Content -}}
+{{- else -}}
+  {{/* Reading from site resources. */}}
+  {{- with resources.GetMatch $name -}}
+    {{- $content = .Content -}}
+  {{- else -}}
+    {{- $content = readFile $name -}}
+  {{- end -}}
+{{- end -}}
+{{- if not $content -}}
+  {{- warnf "[file-content] no such file: %s" $name -}}
+{{- else -}}
+  {{- $content -}}
+{{- end -}}
