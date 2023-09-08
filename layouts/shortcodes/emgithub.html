@@ -1,0 +1,49 @@
+{{- $owner := "" }}
+{{- $repo := "" }}
+{{- $branch := default "main" site.Params.emgithub.branch }}
+{{- $file := "" }}
+{{- $style := default "default" site.Params.emgithub.style }}
+{{- $type := default "markdown" site.Params.emgithub.type }}
+{{- $border := default true site.Params.emgithub.border }}
+{{- $lineNumbers := default true site.Params.emgithub.line_numbers }}
+{{- $fullPath := default true site.Params.emgithub.full_path }}
+{{- $copyButton := default true site.Params.emgithub.copy_button }}
+{{- $fileMeta := default true site.Params.emgithub.file_meta }}
+{{- $jsDelivr := default false site.Params.emgithub.js_delivr }}
+{{- if .IsNamedParams }}
+  {{- $owner = .Get "owner" }}
+  {{- $repo = .Get "repo" }}
+  {{- $file = .Get "file" }}
+  {{- with .Get "branch" }}{{ $branch = . }}{{ end }}
+  {{- with .Get "type" }}{{ $type = . }}{{ end }}
+  {{- with .Get "style" }}{{ $style = . }}{{ end }}
+  {{- if isset .Params "border" }}{{ $border = .Get "border" }}{{ end }}
+  {{- if isset .Params "lineNumbers" }}
+    {{- $lineNumbers = .Get "lineNumbers" }}
+  {{- end }}
+  {{- if isset .Params "fullPath" }}{{ $fullPath = .Get "fullPath" }}{{ end }}
+  {{- if isset .Params "copyButton" }}
+    {{- $copyButton = .Get "copyButton" }}
+  {{- end }}
+  {{- if isset .Params "fileMeta" }}{{ $fileMeta = .Get "fileMeta" }}{{ end }}
+  {{- if isset .Params "jsDelivr" }}{{ $jsDelivr = .Get "jsDelivr" }}{{ end }}
+{{- else }}
+  {{- $owner = .Get 0 }}
+  {{- $repo = .Get 1 }}
+  {{- $file = .Get 2 }}
+  {{- with .Get 3 }}{{ $branch = . }}{{ end }}
+{{- end }}
+{{- $target := printf "https://github.com/%s/%s/blob/%s/%s" $owner $repo $branch $file }}
+{{- $params := slice "target" $target "style" $style "type" $type }}
+{{- if $border }}{{ $params = $params | append "showBorder" "on" }}{{ end }}
+{{- if $lineNumbers }}
+  {{- $params = $params | append "showLineNumbers" "on" }}
+{{- end }}
+{{- if $fileMeta }}{{ $params = $params | append "showFileMeta" "on" }}{{ end }}
+{{- if $fullPath }}{{ $params = $params | append "showFullPath" "on" }}{{ end }}
+{{- if $copyButton }}{{ $params = $params | append "showCopy" "on" }}{{ end }}
+{{- if $jsDelivr }}
+  {{- $params = $params | append "fetchFromJsDelivr" "on" }}
+{{- end }}
+{{- $endpoint := default "https://emgithub.com/embed-v2.js" site.Params.emgithub.endpoint }}
+<script src="{{ printf `%s?%s` $endpoint ($params | querify) }}"></script>

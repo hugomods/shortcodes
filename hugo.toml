@@ -1,0 +1,11 @@
+[params.emgithub]
+endpoint = "https://emgithub.com/embed-v2.js"
+branch = "main"
+type = "markdown"
+style = "default"
+border = true
+line_numbers = true
+full_path = true
+copy_button = true
+file_meta = true
+js_delivr = false
