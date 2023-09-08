@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.12.0](https://github.com/hugomods/shortcodes/compare/v0.11.0...v0.12.0) (2023-09-08)
+
+
+### Features
+
+* add the emgithub shortcode ([#28](https://github.com/hugomods/shortcodes/issues/28)) ([22e448b](https://github.com/hugomods/shortcodes/commit/22e448bbeeef5fb81490d737d7f44d45512c1ad8))
+* add the env shortcode ([#30](https://github.com/hugomods/shortcodes/issues/30)) ([0654971](https://github.com/hugomods/shortcodes/commit/06549719fc1dcb9378d8ad3a9cd62f48650c65fc))
+
 ## [0.11.0](https://github.com/hugomods/shortcodes/compare/v0.10.0...v0.11.0) (2023-09-03)
 
 
