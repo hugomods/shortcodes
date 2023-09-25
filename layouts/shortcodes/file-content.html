@@ -20,5 +20,5 @@
 {{- if not $content -}}
   {{- warnf "[file-content] no such file: %s" $name -}}
 {{- else -}}
-  {{- $content -}}
+  {{- $content | safeHTML -}}
 {{- end -}}
