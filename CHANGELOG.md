@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.12.1](https://github.com/hugomods/shortcodes/compare/v0.12.0...v0.12.1) (2023-09-25)
+
+
+### Bug Fixes
+
+* **file-content:** do not escape the content ([213426a](https://github.com/hugomods/shortcodes/commit/213426ac73be27146a1be4af0d75837aa94a359f))
+
 ## [0.12.0](https://github.com/hugomods/shortcodes/compare/v0.11.0...v0.12.0) (2023-09-08)
 
 
