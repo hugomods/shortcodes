@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.13.1](https://github.com/hugomods/shortcodes/compare/v0.13.0...v0.13.1) (2023-11-24)
+
+
+### Bug Fixes
+
+* **abbr:** remove extra whitespace ([5a1c896](https://github.com/hugomods/shortcodes/commit/5a1c896c82f1c043cdc154e6771051d577f59cca))
+
 ## [0.13.0](https://github.com/hugomods/shortcodes/compare/v0.12.1...v0.13.0) (2023-11-24)
 
 
