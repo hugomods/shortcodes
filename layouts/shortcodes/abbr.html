@@ -10,4 +10,4 @@
 {{- if eq $title "" }}
   {{- warnf "[abbr] missing title for %q" $text }}
 {{- end }}
-<abbr title="{{ $title }}">{{ $text }}</abbr>
+<abbr title="{{ $title }}">{{- $text -}}</abbr>
