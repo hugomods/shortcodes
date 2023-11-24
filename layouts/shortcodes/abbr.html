@@ -1,0 +1,13 @@
+{{- $text := .Get 0 }}
+{{- $title := default "" (.Get 1) }}
+{{- if eq $title "" }}
+  {{- with index site.Data.abbreviations site.Language.LanguageCode }}
+    {{- with index . $text }}
+      {{- $title = . }}
+    {{- end }}
+  {{- end }}
+{{- end }}
+{{- if eq $title "" }}
+  {{- warnf "[abbr] missing title for %q" $text }}
+{{- end }}
+<abbr title="{{ $title }}">{{ $text }}</abbr>
