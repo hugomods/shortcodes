@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.13.0](https://github.com/hugomods/shortcodes/compare/v0.12.1...v0.13.0) (2023-11-24)
+
+
+### Features
+
+* add the abbr shortcode ([#33](https://github.com/hugomods/shortcodes/issues/33)) ([48afb9c](https://github.com/hugomods/shortcodes/commit/48afb9c0082a02a1621759e98a886689a372be42))
+
 ## [0.12.1](https://github.com/hugomods/shortcodes/compare/v0.12.0...v0.12.1) (2023-09-25)
 
 
