@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.13.2](https://github.com/hugomods/shortcodes/compare/v0.13.1...v0.13.2) (2023-11-25)
+
+
+### Bug Fixes
+
+* **abbr:** lowercase the language code to match the data file ([dce5287](https://github.com/hugomods/shortcodes/commit/dce52877254cf212cb33556f87b74d26d09ddc81))
+
 ## [0.13.1](https://github.com/hugomods/shortcodes/compare/v0.13.0...v0.13.1) (2023-11-24)
 
 
