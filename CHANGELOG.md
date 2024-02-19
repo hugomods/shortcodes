@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.14.0](https://github.com/hugomods/shortcodes/compare/v0.13.2...v0.14.0) (2024-02-19)
+
+
+### Features
+
+* add the hugo/shortcode-example shortcode ([#46](https://github.com/hugomods/shortcodes/issues/46)) ([2d43f6e](https://github.com/hugomods/shortcodes/commit/2d43f6e2159ab891bf0d85fb680cbc18ccd38441))
+* add the hugo/shortcode-params shortcode ([#44](https://github.com/hugomods/shortcodes/issues/44)) ([6515056](https://github.com/hugomods/shortcodes/commit/6515056997e4c75505b67e7d809301a4ed24a8a6))
+
 ## [0.13.2](https://github.com/hugomods/shortcodes/compare/v0.13.1...v0.13.2) (2023-11-25)
 
 
