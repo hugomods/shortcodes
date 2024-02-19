@@ -1,0 +1,17 @@
+[parameter_default]
+other = "默認值"
+
+[parameter_heading]
+other = "參數"
+
+[parameter_name]
+other = "名稱"
+
+[parameter_position]
+other = "索引"
+
+[parameter_required]
+other = "必填"
+
+[parameter_type]
+other = "類型"

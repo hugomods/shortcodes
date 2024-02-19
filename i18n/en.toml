@@ -1,0 +1,17 @@
+[parameter_default]
+other = "Default"
+
+[parameter_heading]
+other = "Parameters"
+
+[parameter_name]
+other = "Name"
+
+[parameter_position]
+other = "Position"
+
+[parameter_required]
+other = "Required"
+
+[parameter_type]
+other = "Type"
