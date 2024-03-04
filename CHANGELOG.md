@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.15.0](https://github.com/hugomods/shortcodes/compare/v0.14.0...v0.15.0) (2024-03-04)
+
+
+### Features
+
+* add the page-resource-content shortcode to reuse page resources ([#50](https://github.com/hugomods/shortcodes/issues/50)) ([2d89064](https://github.com/hugomods/shortcodes/commit/2d890646adae5ac143f9a52447b33abf32bce3a3))
+
 ## [0.14.0](https://github.com/hugomods/shortcodes/compare/v0.13.2...v0.14.0) (2024-02-19)
 
 
