@@ -31,11 +31,11 @@
     }}
     {{- printf "\n" }}
     {{- with .description }}
-      {{- if reflect.IsMap . }}
-        {{- default .default (index . (site.Language.LanguageCode | lower)) | printf "%s\n" }}
-      {{- else }}
-        {{- . | printf "%s\n" }}
+      {{- $desc := . }}
+      {{- if reflect.IsMap $desc }}
+        {{- $desc = default .default (index . (site.Language.LanguageCode | lower)) }}
       {{- end }}
+      {{- $desc | $.Page.RenderString | printf "%s\n" | safeHTML }}
     {{- end }}
   {{- end }}
 {{- end }}
