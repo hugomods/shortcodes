@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.16.0](https://github.com/hugomods/shortcodes/compare/v0.15.0...v0.16.0) (2024-03-05)
+
+
+### Features
+
+* add the params shortcode for listing parameters ([ccf1f25](https://github.com/hugomods/shortcodes/commit/ccf1f250cb6e9c24a4d941c18661d6a5e1313027))
+
+
+### Bug Fixes
+
+* **hugo/shortcode-params:** allow using shortcode on description ([b2d012d](https://github.com/hugomods/shortcodes/commit/b2d012dc2a0a6d35193c28359280bf9d1f536994))
+
 ## [0.15.0](https://github.com/hugomods/shortcodes/compare/v0.14.0...v0.15.0) (2024-03-04)
 
 
