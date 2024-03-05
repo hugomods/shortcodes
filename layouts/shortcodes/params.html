@@ -1,0 +1,39 @@
+{{- $headingStartLevel := 2 }}
+{{- $data := "" }}
+{{- if .IsNamedParams }}
+  {{- $data = .Get "data" }}
+  {{- with .Get "headingStartLevel" }}{{ $headingStartLevel = . }}{{ end }}
+{{- else }}
+  {{- $data = .Get 0 }}
+{{- end }}
+{{- with .Page.Resources.Get $data }}
+  {{- $params := transform.Unmarshal . }}
+  {{-  printf "%s %s\n" (strings.Repeat $headingStartLevel "#") (i18n "parameter_heading") }}
+  {{- $paramHeadingLevel := add 1 $headingStartLevel }}
+  {{- range $params }}
+    {{- printf "%s `%s`\n" (strings.Repeat $paramHeadingLevel "#") .name }}
+    {{- printf
+      "| %s | %s | %s | %s |\n"
+      (i18n "parameter_name")
+      (i18n "parameter_type")
+      (i18n "parameter_required")
+      (i18n "parameter_default")
+    }}
+    {{- printf "| --- | :-: | :-: | :-: |\n" }}
+    {{- printf
+      "| `%s` | `%s` | %s | %s |\n"
+      .name
+      (default "string" .type)
+      (cond (default false .required) "✓" "-")
+      (cond (isset . "default") (printf "`%s`" (string .default)) "-")
+    }}
+    {{- printf "\n" }}
+    {{- with .description }}
+      {{- $desc := . }}
+      {{- if reflect.IsMap $desc }}
+        {{- $desc = default .default (index . (site.Language.LanguageCode | lower)) }}
+      {{- end }}
+      {{- $desc | $.Page.RenderString | printf "%s\n" | safeHTML }}
+    {{- end }}
+  {{- end }}
+{{- end }}
