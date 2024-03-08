@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.17.0](https://github.com/hugomods/shortcodes/compare/v0.16.0...v0.17.0) (2024-03-08)
+
+
+### Features
+
+* **hugo/shortcode-params:** add the heading parameter ([968e1e6](https://github.com/hugomods/shortcodes/commit/968e1e6c334a5bc706f66211dcafa7bfe3c16e2a))
+* **params:** add the heading parameter ([f2cf6d7](https://github.com/hugomods/shortcodes/commit/f2cf6d76ef7f2120f8774274c5923aba106edb51))
+
 ## [0.16.0](https://github.com/hugomods/shortcodes/compare/v0.15.0...v0.16.0) (2024-03-05)
 
 
