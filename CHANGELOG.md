@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.18.1](https://github.com/hugomods/shortcodes/compare/v0.18.0...v0.18.1) (2024-03-10)
+
+
+### Bug Fixes
+
+* **hugo/shortcode-params:** add a new line after options ([bcafd17](https://github.com/hugomods/shortcodes/commit/bcafd17461f204c8770c0a615da7e2df835072c5))
+* **params:** add a new line after options ([bcafd17](https://github.com/hugomods/shortcodes/commit/bcafd17461f204c8770c0a615da7e2df835072c5))
+
 ## [0.18.0](https://github.com/hugomods/shortcodes/compare/v0.17.0...v0.18.0) (2024-03-10)
 
 
