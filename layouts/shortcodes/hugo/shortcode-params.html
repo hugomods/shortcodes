@@ -45,6 +45,7 @@
     {{- with .options }}
       {{- printf "\n" }}
       {{- delimit (apply . "printf" "`%s`" ".") ", " | i18n "parameter_options" }}
+      {{- printf "\n" }}
     {{- end }}
   {{- end }}
 {{- end }}
