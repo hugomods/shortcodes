@@ -7,6 +7,9 @@ other = "參數"
 [parameter_name]
 other = "名稱"
 
+[parameter_options]
+other = "可選項：{{ . }}。"
+
 [parameter_position]
 other = "索引"
 

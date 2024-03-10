@@ -10,6 +10,9 @@ other = "Name"
 [parameter_position]
 other = "Position"
 
+[parameter_options]
+other = "Available options: {{ . }}."
+
 [parameter_required]
 other = "Required"
 

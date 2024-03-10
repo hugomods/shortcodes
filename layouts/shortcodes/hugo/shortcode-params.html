@@ -42,5 +42,9 @@
       {{- end }}
       {{- $desc | $.Page.RenderString | printf "%s\n" | safeHTML }}
     {{- end }}
+    {{- with .options }}
+      {{- printf "\n" }}
+      {{- delimit (apply . "printf" "`%s`" ".") ", " | i18n "parameter_options" }}
+    {{- end }}
   {{- end }}
 {{- end }}
