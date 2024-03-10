@@ -13,5 +13,8 @@ other = "索引"
 [parameter_required]
 other = "必填"
 
+[parameter_since]
+other = "版本"
+
 [parameter_type]
 other = "类型"

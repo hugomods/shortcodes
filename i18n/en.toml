@@ -13,5 +13,8 @@ other = "Position"
 [parameter_required]
 other = "Required"
 
+[parameter_since]
+other = "Since"
+
 [parameter_type]
 other = "Type"

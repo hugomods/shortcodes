@@ -15,19 +15,21 @@
   {{- range $params }}
     {{- printf "%s `%s`\n" (strings.Repeat $paramHeadingLevel "#") .name }}
     {{- printf
-      "| %s | %s | %s | %s |\n"
+      "| %s | %s | %s | %s | %s |\n"
       (i18n "parameter_name")
       (i18n "parameter_type")
       (i18n "parameter_required")
       (i18n "parameter_default")
+      (i18n "parameter_since")
     }}
-    {{- printf "| --- | :-: | :-: | :-: |\n" }}
+    {{- printf "| --- | :-: | :-: | :-: | :-: |\n" }}
     {{- printf
-      "| `%s` | `%s` | %s | %s |\n"
+      "| `%s` | `%s` | %s | %s | %s |\n"
       .name
       (default "string" .type)
       (cond (default false .required) "✓" "-")
       (cond (isset . "default") (printf "`%s`" (string .default)) "-")
+      (cond (isset . "since") (printf "`%s`" (string .since)) "-")
     }}
     {{- printf "\n" }}
     {{- with .description }}
