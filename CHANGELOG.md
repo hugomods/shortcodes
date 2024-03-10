@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.18.0](https://github.com/hugomods/shortcodes/compare/v0.17.0...v0.18.0) (2024-03-10)
+
+
+### Features
+
+* **hugo/shortcode-params:** add the deprecated parameter for items ([247d9b2](https://github.com/hugomods/shortcodes/commit/247d9b24a87d79794966636661f8cb504fe84fba))
+* **hugo/shortcode-params:** add the options property for parameters ([51ce244](https://github.com/hugomods/shortcodes/commit/51ce244f52de7496d799082a35e5129eb7355411))
+* **hugo/shortcode-params:** add the since parameter for items ([db24371](https://github.com/hugomods/shortcodes/commit/db243715de333b7d9c500c439694c2ddbc77894b))
+* **params:** add the deprecated parameter for items ([247d9b2](https://github.com/hugomods/shortcodes/commit/247d9b24a87d79794966636661f8cb504fe84fba))
+* **params:** add the options property for parameters ([51ce244](https://github.com/hugomods/shortcodes/commit/51ce244f52de7496d799082a35e5129eb7355411))
+* **params:** add the since parameter for items ([db24371](https://github.com/hugomods/shortcodes/commit/db243715de333b7d9c500c439694c2ddbc77894b))
+
 ## [0.17.0](https://github.com/hugomods/shortcodes/compare/v0.16.0...v0.17.0) (2024-03-08)
 
 
