@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.19.0](https://github.com/hugomods/shortcodes/compare/v0.18.1...v0.19.0) (2024-05-28)
+
+
+### Features
+
+* **i18n:** add Vietnamese translations ([ea47ea7](https://github.com/hugomods/shortcodes/commit/ea47ea7cd5136490eaec56d75becd5a6e9d5fd9a))
+
 ## [0.18.1](https://github.com/hugomods/shortcodes/compare/v0.18.0...v0.18.1) (2024-03-10)
 
 
