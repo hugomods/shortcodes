@@ -1,0 +1,23 @@
+[parameter_default]
+other = "Default"
+
+[parameter_heading]
+other = "Parameters"
+
+[parameter_name]
+other = "Name"
+
+[parameter_position]
+other = "Position"
+
+[parameter_options]
+other = "Available options: {{ . }}."
+
+[parameter_required]
+other = "Required"
+
+[parameter_since]
+other = "Since"
+
+[parameter_type]
+other = "Type"
