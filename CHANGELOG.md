@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.20.0](https://github.com/hugomods/shortcodes/compare/v0.19.0...v0.20.0) (2024-06-04)
+
+
+### Features
+
+* **params:** add the context parameter ([#59](https://github.com/hugomods/shortcodes/issues/59)) ([63fc637](https://github.com/hugomods/shortcodes/commit/63fc6378060c1955ce7b8f519ae1a3b3b8ab6804))
+
 ## [0.19.0](https://github.com/hugomods/shortcodes/compare/v0.18.1...v0.19.0) (2024-05-28)
 
 
