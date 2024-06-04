@@ -1,10 +1,12 @@
 {{- $heading := i18n "parameter_heading" }}
 {{- $headingStartLevel := 2 }}
 {{- $data := "" }}
+{{- $context := "" }}
 {{- if .IsNamedParams }}
   {{- $data = .Get "data" }}
   {{- with .Get "heading" }}{{ $heading = . }}{{ end }}
   {{- with .Get "headingStartLevel" }}{{ $headingStartLevel = . }}{{ end }}
+  {{- with .Get "context" }}{{ $context = . }}{{ end }}
 {{- else }}
   {{- $data = .Get 0 }}
 {{- end }}
@@ -14,19 +16,22 @@
   {{- $paramHeadingLevel := add 1 $headingStartLevel }}
   {{- range $params }}
     {{- $name := printf (cond (default false .deprecated) "~~`%s`~~" "`%s`") .name }}
+    {{- $ctx := default $context .context }}
     {{- printf "%s %s\n" (strings.Repeat $paramHeadingLevel "#") $name }}
     {{- printf
-      "| %s | %s | %s | %s | %s |\n"
+      "| %s | %s | %s | %s | %s | %s |\n"
       (i18n "parameter_name")
+      (i18n "parameter_context")
       (i18n "parameter_type")
       (i18n "parameter_required")
       (i18n "parameter_default")
       (i18n "parameter_since")
     }}
-    {{- printf "| --- | :-: | :-: | :-: | :-: |\n" }}
+    {{- printf "| --- | :-: | :-: | :-: | :-: | :-: |\n" }}
     {{- printf
-      "| %s | `%s` | %s | %s | %s |\n"
+      "| %s | %s | `%s` | %s | %s | %s |\n"
       $name
+      (cond (not $ctx) "-" $ctx | printf "`%s`")
       (default "string" .type)
       (cond (default false .required) "✓" "-")
       (cond (isset . "default") (printf "`%s`" (string .default)) "-")
