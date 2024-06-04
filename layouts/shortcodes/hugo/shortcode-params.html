@@ -14,6 +14,12 @@
   {{- $paramHeadingLevel := add 1 $headingStartLevel }}
   {{- range $params }}
     {{- $name := printf (cond (default false .deprecated) "~~`%s`~~" "`%s`") .name }}
+    {{- $type := default "string" .type }}
+    {{- if reflect.IsSlice $type }}
+      {{- $type = delimit (apply $type "printf" "`%s`" ".")  "/" }}
+    {{- else }}
+      {{- $type = printf "`%s`" $type }}
+    {{- end }}
     {{- printf "%s %s\n" (strings.Repeat $paramHeadingLevel "#") $name }}
     {{- printf
       "| %s | %s | %s | %s | %s | %s |\n"
@@ -26,10 +32,10 @@
     }}
     {{- printf "| --- | :-: | :-: | :-: | :-: | :-: |\n" }}
     {{- printf
-      "| %s | %s | `%s` | %s | %s | %s |\n"
+      "| %s | %s | %s | %s | %s | %s |\n"
       (cond (isset . "position") (printf "`#%d`" .position) "-")
       $name
-      (default "string" .type)
+      $type
       (cond (default false .required) "✓" "-")
       (cond (isset . "default") (printf "`%s`" (string .default)) "-")
       (cond (isset . "since") (printf "`%s`" (string .since)) "-")

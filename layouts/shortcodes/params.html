@@ -17,6 +17,12 @@
   {{- range $params }}
     {{- $name := printf (cond (default false .deprecated) "~~`%s`~~" "`%s`") .name }}
     {{- $ctx := default $context .context }}
+    {{- $type := default "string" .type }}
+    {{- if reflect.IsSlice $type }}
+      {{- $type = delimit (apply $type "printf" "`%s`" ".")  "/" }}
+    {{- else }}
+      {{- $type = printf "`%s`" $type }}
+    {{- end }}
     {{- printf "%s %s\n" (strings.Repeat $paramHeadingLevel "#") $name }}
     {{- printf
       "| %s | %s | %s | %s | %s | %s |\n"
@@ -29,10 +35,10 @@
     }}
     {{- printf "| --- | :-: | :-: | :-: | :-: | :-: |\n" }}
     {{- printf
-      "| %s | %s | `%s` | %s | %s | %s |\n"
+      "| %s | %s | %s | %s | %s | %s |\n"
       $name
       (cond (not $ctx) "-" $ctx | printf "`%s`")
-      (default "string" .type)
+      $type
       (cond (default false .required) "✓" "-")
       (cond (isset . "default") (printf "`%s`" (string .default)) "-")
       (cond (isset . "since") (printf "`%s`" (string .since)) "-")
