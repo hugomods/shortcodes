@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.21.0](https://github.com/hugomods/shortcodes/compare/v0.20.0...v0.21.0) (2024-06-04)
+
+
+### Features
+
+* **hugo/shortcode-params:** allow specifying multiple types ([3cfc0b1](https://github.com/hugomods/shortcodes/commit/3cfc0b1a80f7df00637c55fafc2eb297cc72d774))
+* **params:** allow specifying multiple types ([#61](https://github.com/hugomods/shortcodes/issues/61)) ([3cfc0b1](https://github.com/hugomods/shortcodes/commit/3cfc0b1a80f7df00637c55fafc2eb297cc72d774))
+
 ## [0.20.0](https://github.com/hugomods/shortcodes/compare/v0.19.0...v0.20.0) (2024-06-04)
 
 
