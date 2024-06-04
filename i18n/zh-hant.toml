@@ -1,3 +1,6 @@
+[parameter_context]
+other = "上下文"
+
 [parameter_default]
 other = "默認值"
 
