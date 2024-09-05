@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.22.0](https://github.com/hugomods/shortcodes/compare/v0.21.0...v0.22.0) (2024-09-05)
+
+
+### Features
+
+* add hugo/preview shortcode, a alias of hugo/shortcode-example ([#66](https://github.com/hugomods/shortcodes/issues/66)) ([d110a07](https://github.com/hugomods/shortcodes/commit/d110a0743b5eb02be5b74c473dcb6b0a8c129eab))
+
 ## [0.21.0](https://github.com/hugomods/shortcodes/compare/v0.20.0...v0.21.0) (2024-06-04)
 
 
