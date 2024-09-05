@@ -1,3 +1,9 @@
+[hugo_preview_result]
+other = "Result"
+
+[hugo_preview_source]
+other = "Source"
+
 [parameter_context]
 other = "Context"
 
