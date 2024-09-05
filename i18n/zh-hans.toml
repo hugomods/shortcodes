@@ -1,3 +1,9 @@
+[hugo_preview_result]
+other = "结果"
+
+[hugo_preview_source]
+other = "源码"
+
 [parameter_context]
 other = "上下文"
 

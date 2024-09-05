@@ -1,0 +1,15 @@
+{{- $source := trim .Source "\r\n" -}}
+<div class="hugo-preview">
+  <div class="hugo-preview-source">
+    <div class="hugo-preview-source-title" style="font-weight: bold; margin-bottom: .25rem;">
+      {{- i18n "hugo_preview_source" | default "Source" -}}
+    </div>
+    {{- highlight $source "markdown" -}}
+  </div>
+  <div class="hugo-preview-result">
+    <div class="hugo-preview-result-title" style="font-weight: bold; margin-bottom: .25rem;">
+      {{- i18n "hugo_preview_result" | default "Result" -}}
+    </div>
+    {{- $source | .Page.RenderString }}
+  </div>
+</div>
