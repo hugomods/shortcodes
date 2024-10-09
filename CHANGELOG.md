@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.22.1](https://github.com/hugomods/shortcodes/compare/v0.22.0...v0.22.1) (2024-10-09)
+
+
+### Bug Fixes
+
+* **page-resource-content:** avoid rendering invalid Markdown ([c667ab2](https://github.com/hugomods/shortcodes/commit/c667ab2d9e0e1a75288297770c7c848c6bfc73af))
+
 ## [0.22.0](https://github.com/hugomods/shortcodes/compare/v0.21.0...v0.22.0) (2024-09-05)
 
 
