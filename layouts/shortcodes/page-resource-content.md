@@ -4,5 +4,9 @@
   {{- $markdown = .Get 1 }}
 {{- end }}
 {{- with .Page.Resources.Get $name }}
-  {{- cond $markdown (.Content | $.Page.RenderString) .Content }}
+  {{- if $markdown }}
+    {{- .Content | $.Page.RenderString }}
+  {{- else }}
+    {{- .Content }}
+  {{- end }}
 {{- end }}
