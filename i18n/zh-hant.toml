@@ -13,6 +13,9 @@ other = "默認值"
 [parameter_heading]
 other = "參數"
 
+[parameter_example]
+other = "示例"
+
 [parameter_name]
 other = "名稱"
 
