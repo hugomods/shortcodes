@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.23.0](https://github.com/hugomods/shortcodes/compare/v0.22.1...v0.23.0) (2024-10-11)
+
+
+### Features
+
+* **hugo/shortcode-params:** add `example` property ([a0ac8be](https://github.com/hugomods/shortcodes/commit/a0ac8bed305aa4ba3286d6da76129ea1d2bd5737))
+* **params:** add `example` property ([#72](https://github.com/hugomods/shortcodes/issues/72)) ([a0ac8be](https://github.com/hugomods/shortcodes/commit/a0ac8bed305aa4ba3286d6da76129ea1d2bd5737))
+
 ## [0.22.1](https://github.com/hugomods/shortcodes/compare/v0.22.0...v0.22.1) (2024-10-09)
 
 
