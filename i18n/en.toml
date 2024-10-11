@@ -10,6 +10,9 @@ other = "Context"
 [parameter_default]
 other = "Default"
 
+[parameter_example]
+other = "Example"
+
 [parameter_heading]
 other = "Parameters"
 

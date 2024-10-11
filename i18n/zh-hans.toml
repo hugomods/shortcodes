@@ -10,6 +10,9 @@ other = "上下文"
 [parameter_default]
 other = "默认值"
 
+[parameter_example]
+other = "示例"
+
 [parameter_heading]
 other = "参数"
 
