@@ -1,0 +1,35 @@
+[hugo_preview_result]
+other = "Resultado"
+
+[hugo_preview_source]
+other = "Fonte"
+
+[parameter_context]
+other = "Contexto"
+
+[parameter_default]
+other = "Padrão"
+
+[parameter_example]
+other = "Exemplo"
+
+[parameter_heading]
+other = "Parâmetros"
+
+[parameter_name]
+other = "Nome"
+
+[parameter_position]
+other = "Posição"
+
+[parameter_options]
+other = "Opções disponíveis: {{ . }}."
+
+[parameter_required]
+other = "Obrigatório"
+
+[parameter_since]
+other = "Desde"
+
+[parameter_type]
+other = "Tipo"
