@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.24.0](https://github.com/hugomods/shortcodes/compare/v0.23.0...v0.24.0) (2024-12-10)
+
+
+### Features
+
+* **i18n:** create pt-br.toml ([#78](https://github.com/hugomods/shortcodes/issues/78)) ([983ab96](https://github.com/hugomods/shortcodes/commit/983ab963d301b4da37df3731342b3550a37d276b))
+
 ## [0.23.0](https://github.com/hugomods/shortcodes/compare/v0.22.1...v0.23.0) (2024-10-11)
 
 
