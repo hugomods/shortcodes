@@ -10,6 +10,7 @@
 {{- $copyButton := default true site.Params.emgithub.copy_button }}
 {{- $fileMeta := default true site.Params.emgithub.file_meta }}
 {{- $jsDelivr := default false site.Params.emgithub.js_delivr }}
+{{- $maxHeight := 0 }}
 {{- if .IsNamedParams }}
   {{- $owner = .Get "owner" }}
   {{- $repo = .Get "repo" }}
@@ -27,6 +28,7 @@
   {{- end }}
   {{- if isset .Params "fileMeta" }}{{ $fileMeta = .Get "fileMeta" }}{{ end }}
   {{- if isset .Params "jsDelivr" }}{{ $jsDelivr = .Get "jsDelivr" }}{{ end }}
+  {{- with .Get "maxHeight"}}{{ $maxHeight = . }}{{ end }}
 {{- else }}
   {{- $owner = .Get 0 }}
   {{- $repo = .Get 1 }}
@@ -44,6 +46,9 @@
 {{- if $copyButton }}{{ $params = $params | append "showCopy" "on" }}{{ end }}
 {{- if $jsDelivr }}
   {{- $params = $params | append "fetchFromJsDelivr" "on" }}
+{{- end }}
+{{- with $maxHeight }}
+  {{- $params = $params | append "maxHeight" . }}
 {{- end }}
 {{- $endpoint := default "https://emgithub.com/embed-v2.js" site.Params.emgithub.endpoint }}
 <script src="{{ printf `%s?%s` $endpoint ($params | querify) }}"></script>
