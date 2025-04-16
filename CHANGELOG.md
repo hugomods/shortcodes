@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.25.0](https://github.com/hugomods/shortcodes/compare/v0.24.0...v0.25.0) (2025-04-16)
+
+
+### Features
+
+* add maxHeight parameter for emgithub shortcode ([0641175](https://github.com/hugomods/shortcodes/commit/0641175d529019a2f86923ba16171af584b360d3)), closes [#84](https://github.com/hugomods/shortcodes/issues/84)
+
 ## [0.24.0](https://github.com/hugomods/shortcodes/compare/v0.23.0...v0.24.0) (2024-12-10)
 
 
