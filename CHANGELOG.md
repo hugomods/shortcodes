@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.25.1](https://github.com/hugomods/shortcodes/compare/v0.25.0...v0.25.1) (2025-06-02)
+
+
+### Bug Fixes
+
+* rename shortcodes with md extension to html, to adapt to Hugo v0.146.0 changes ([6e5dfba](https://github.com/hugomods/shortcodes/commit/6e5dfba3c60fe27cbd721f25173ed9c6c4cf716e))
+
 ## [0.25.0](https://github.com/hugomods/shortcodes/compare/v0.24.0...v0.25.0) (2025-04-16)
 
 
